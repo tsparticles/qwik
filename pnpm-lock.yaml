@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@builder.io/qwik':
-    specifier: 1.2.6
-    version: 1.2.6(undici@5.23.0)
+    specifier: 1.2.7
+    version: 1.2.7(undici@5.23.0)
   '@types/eslint':
     specifier: 8.44.2
     version: 8.44.2
@@ -30,7 +30,7 @@ devDependencies:
     version: 8.47.0
   eslint-plugin-qwik:
     specifier: latest
-    version: 1.2.6(eslint@8.47.0)
+    version: 1.2.7(eslint@8.47.0)
   np:
     specifier: 8.0.4
     version: 8.0.4
@@ -89,8 +89,8 @@ packages:
       types-pkg-json: 1.2.1
     dev: true
 
-  /@builder.io/qwik@1.2.6(undici@5.23.0):
-    resolution: {integrity: sha512-Cm1sLAimML55I5T1RI80R1lLgI4cnSeQt5obQtcMKa8wMmf2/luEyQaEkeN2fV3sp/gaVXCfAuKaddXK6ONdww==}
+  /@builder.io/qwik@1.2.7(undici@5.23.0):
+    resolution: {integrity: sha512-jTaJ/LaifUD7UvvSg1JGSySiUl/RxQaul/QrXVr+jbky+hpa6jk0HHQ9Hv21MptAqwU+EPKL81Wqfws4CsHkaQ==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
     peerDependencies:
@@ -1451,11 +1451,11 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /eslint-plugin-qwik@1.2.6(eslint@8.47.0):
-    resolution: {integrity: sha512-AY0+0Omu3yu85gm2PjfjyG8pAXBntZPwDpIHXOvav1FmrocwW+khR8QGZpjIu2jirZ8xol9d+TITgzHms8Llxw==}
+  /eslint-plugin-qwik@1.2.7(eslint@8.47.0):
+    resolution: {integrity: sha512-WFwwKzsURv4lOzF8arT5s59ZR0xizXCYhZBCZLa0ZalUaYAmPn444CRgqbTKWd0kRKtObI7I0FMN04jUrUXpEw==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     peerDependencies:
-      eslint: '>= 8'
+      eslint: 8.45.0
     dependencies:
       eslint: 8.47.0
       jsx-ast-utils: 3.3.4
