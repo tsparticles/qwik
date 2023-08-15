@@ -45,7 +45,7 @@
     "eslint": "8.47.0",
     "eslint-plugin-qwik": "latest",
     "np": "8.0.4",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "typescript": "5.1.6",
     "tsparticles": "^2.11.1",
     "undici": "5.23.0",
