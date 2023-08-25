@@ -37,7 +37,7 @@
     "tsparticles-engine": "^2.11.1"
   },
   "devDependencies": {
-    "@builder.io/qwik": "1.2.8",
+    "@builder.io/qwik": "1.2.9",
     "@types/eslint": "8.44.2",
     "@types/node": "^20.4.0",
     "@typescript-eslint/eslint-plugin": "6.4.1",
