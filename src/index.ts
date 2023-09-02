@@ -1,1 +1,1 @@
-export { Particles } from "./components/particles/particles";
+export { Particles } from "./components/particles";
