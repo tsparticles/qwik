@@ -16,7 +16,6 @@ export default () => {
       </head>
       <body>
         <Particles
-          client:only
           id="tsparticles"
           init={init}
           options={{
