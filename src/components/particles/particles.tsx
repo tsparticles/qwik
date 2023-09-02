@@ -53,7 +53,7 @@ const Particles = component$<IParticlesProps>((props) => {
 
     const initParticles = async () => {
       if (InitFC) {
-        await InitFC!(tsParticles);
+        await InitFC(tsParticles);
       }
 
       initSig.value = true;
