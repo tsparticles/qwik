@@ -1,74 +1,87 @@
-import { CSSProperties, component$, useSignal, useTask$ } from "@builder.io/qwik";
-import { type Container, type Engine, type ISourceOptions, tsParticles } from "tsparticles-engine";
-import { isServer } from "@builder.io/qwik/build";
+import {
+  $,
+  NoSerialize,
+  component$,
+  noSerialize,
+  useSignal,
+  useVisibleTask$,
+} from "@builder.io/qwik";
+import { Container, tsParticles } from "tsparticles-engine";
+import type { IParticlesProps } from "./IParticlesProps";
 
-interface IParticlesProps {
-    id?: string;
-    width?: string;
-    height?: string;
-    options?: ISourceOptions;
-    url?: string;
-    style?: CSSProperties;
-    className?: string;
-    canvasClassName?: string;
-    container?: { current: Container };
-    init?: (engine: Engine) => Promise<void>;
-    loaded?: (container: Container) => Promise<void>;
-}
+/**
+ * @param (props:IParticlesProps) Particles component properties
+ */
+const Particles = component$<IParticlesProps>((props) => {
+  const initSig = useSignal(false);
 
-export const Particles = component$<IParticlesProps>((props) => {
-    console.log(isServer);
+  const librarySig = useSignal<NoSerialize<Container | undefined>>(undefined);
 
-    //if (isServer) {
-    //    return <></>;
-    //}
+  const id = props.id ?? "tsparticles";
 
-    const initialized = useSignal(false),
-        containerId = useSignal<string>(),
-        { className, canvasClassName, id, init, loaded, options, url, width, height } = props;
+  const {
+    init: InitFC,
+    class: className,
+    canvasClassName,
+    height,
+    width,
+    loaded,
+  } = props;
 
-    useTask$(async ({ track }) => {
-        track(() => initialized.value);
+  useVisibleTask$(function Initializer({ track, cleanup }) {
+    track(() => initSig.value);
 
-        if (!init || !initialized.value) {
-            return;
-        }
+    const loadParticles = $(async () => {
+      if (!initSig.value) return;
 
-        await init(tsParticles);
+      const container = await tsParticles.load({
+        url: props.url,
+        id,
+        options: props.options ?? props.params,
+      });
 
-        initialized.value = true;
+      if (props.container) {
+        props.container.value = noSerialize(container);
+      }
+
+      librarySig.value = noSerialize(container);
+
+      if (loaded) {
+        await loaded(container!);
+      }
     });
 
-    useTask$(async ({ track }) => {
-        track(() => initialized.value);
+    const initParticles = async () => {
+      if (InitFC) {
+        await InitFC!(tsParticles);
+      }
 
-        if (!initialized.value) {
-            return;
-        }
+      initSig.value = true;
+      await loadParticles();
+    };
 
-        let container = tsParticles.dom().find(t => t.id === containerId.value);
+    initParticles();
 
-        container?.destroy();
-
-        container = await tsParticles.load({ id, url, options });
-
-        containerId.value = container?.id;
-
-        if (loaded && container) {
-            await loaded(container);
-        }
+    cleanup(() => {
+      if (librarySig.value) {
+        librarySig.value.destroy();
+        librarySig.value = undefined;
+      }
     });
+  });
 
-    return (
-        <div class={className ?? ""} id={id}>
-            <canvas
-                class={canvasClassName ?? ""}
-                style={{
-                    ...props.style,
-                    width,
-                    height,
-                }}
-            />
-        </div>
-    );
+  return (
+    <div class={className} id={id}>
+      <canvas
+        class={canvasClassName}
+        height={height}
+        width={width}
+        style={{
+          ...props.style,
+        }}
+      />
+    </div>
+  );
 });
+
+export default Particles;
