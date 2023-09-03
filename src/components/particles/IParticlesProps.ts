@@ -15,5 +15,5 @@ export interface IParticlesProps {
 	canvasClassName?: ClassList | Signal<ClassList>;
 	container?: Signal<NoSerialize<Container | undefined>>;
 	init?: QRL<(engine: Engine) => Promise<void>>;
-	loaded?: QRL<(container: Container) => Promise<void>>;
+	loaded?: QRL<(container?: Container) => Promise<void>>;
 }

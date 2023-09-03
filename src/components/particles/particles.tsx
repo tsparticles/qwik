@@ -47,7 +47,7 @@ const Particles = component$<IParticlesProps>((props) => {
       librarySig.value = noSerialize(container);
 
       if (loaded) {
-        await loaded(container!);
+        await loaded(container);
       }
     });
 
