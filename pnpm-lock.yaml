@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@builder.io/qwik':
     specifier: 1.2.12
-    version: 1.2.12(undici@5.25.2)
+    version: 1.2.12(undici@5.25.3)
   '@types/eslint':
     specifier: 8.44.3
     version: 8.44.3
@@ -44,8 +44,8 @@ devDependencies:
     specifier: 5.2.2
     version: 5.2.2
   undici:
-    specifier: 5.25.2
-    version: 5.25.2
+    specifier: 5.25.3
+    version: 5.25.3
   vite:
     specifier: 4.4.9
     version: 4.4.9(@types/node@20.5.9)
@@ -89,7 +89,7 @@ packages:
       types-pkg-json: 1.2.1
     dev: true
 
-  /@builder.io/qwik@1.2.12(undici@5.25.2):
+  /@builder.io/qwik@1.2.12(undici@5.25.3):
     resolution: {integrity: sha512-17dwM9BR0NJtrWLPlDygdYMlRkBAMEp8nkPIhhApSH5c/ESQMlbVg7Rm665WkBTf87+Epd+b7cC7Ky+8iYGjmA==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
@@ -97,7 +97,7 @@ packages:
       undici: ^5.14.0
     dependencies:
       csstype: 3.1.2
-      undici: 5.25.2
+      undici: 5.25.3
     dev: true
 
   /@esbuild/android-arm64@0.18.17:
@@ -333,6 +333,11 @@ packages:
   /@eslint/js@8.50.0:
     resolution: {integrity: sha512-NCC3zz2+nvYd+Ckfh87rA47zfu2QsQpvc6k1yzTk+b9KzRj0wkGa8LSoGOXN6Zv4lRf/EIoZ80biDh9HOI+RNQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@fastify/busboy@2.0.0:
+    resolution: {integrity: sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==}
+    engines: {node: '>=14'}
     dev: true
 
   /@humanwhocodes/config-array@0.11.11:
@@ -899,13 +904,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       run-applescript: 5.0.0
-    dev: true
-
-  /busboy@1.6.0:
-    resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
-    engines: {node: '>=10.16.0'}
-    dependencies:
-      streamsearch: 1.1.0
     dev: true
 
   /cacheable-lookup@5.0.4:
@@ -3588,11 +3586,6 @@ packages:
     resolution: {integrity: sha512-XkD+zwiqXHikFZm4AX/7JSCXA98U5Db4AFd5XUg/+9UNtnH75+Z9KxtpYiJZx36mUDVOwH83pl7yvCer6ewM3w==}
     dev: true
 
-  /streamsearch@1.1.0:
-    resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
-    engines: {node: '>=10.0.0'}
-    dev: true
-
   /string-width@1.0.2:
     resolution: {integrity: sha512-0XsVpQLnVCXHJfyEs8tC0zpTVIr5PKKsQtkT29IwupnPTjtPmQ3xT/4yCREF9hYkV/3M3kzcUTSAZT6a6h81tw==}
     engines: {node: '>=0.10.0'}
@@ -4239,11 +4232,11 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici@5.25.2:
-    resolution: {integrity: sha512-tch8RbCfn1UUH1PeVCXva4V8gDpGAud/w0WubD6sHC46vYQ3KDxL+xv1A2UxK0N6jrVedutuPHxe1XIoqerwMw==}
+  /undici@5.25.3:
+    resolution: {integrity: sha512-7lmhlz3K1+IKB6IUjkdzV2l0jKY8/0KguEMdEpzzXCug5pEGIp3DxUg0DEN65DrVoxHiRKpPORC/qzX+UglSkQ==}
     engines: {node: '>=14.0'}
     dependencies:
-      busboy: 1.6.0
+      '@fastify/busboy': 2.0.0
     dev: true
 
   /unique-string@3.0.0:
