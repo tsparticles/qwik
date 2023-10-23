@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@builder.io/qwik':
-    specifier: 1.2.13
-    version: 1.2.13(undici@5.25.3)
+    specifier: 1.2.14
+    version: 1.2.14(undici@5.25.3)
   '@types/eslint':
     specifier: 8.44.6
     version: 8.44.6
@@ -89,8 +89,8 @@ packages:
       types-pkg-json: 1.2.1
     dev: true
 
-  /@builder.io/qwik@1.2.13(undici@5.25.3):
-    resolution: {integrity: sha512-JVBBfkoFNGDd6BZzuk8k2rS+Td9SLngZWk0j6lJCQNPj548vA4DdERlUM+iHe3BYq2q7A3oMo63vUF74h42gDw==}
+  /@builder.io/qwik@1.2.14(undici@5.25.3):
+    resolution: {integrity: sha512-z+NFSNrAKjCVV/9d2f50Y/AthcHdlH4Hbltyjjl/0wOv4FUR3F/Ke9wz9eIhDYQ6rzFqzdav2/yTiip05El1zA==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
     peerDependencies:
