@@ -44,7 +44,7 @@
     "@typescript-eslint/parser": "6.14.0",
     "eslint": "8.55.0",
     "eslint-plugin-qwik": "latest",
-    "np": "8.0.4",
+    "np": "9.2.0",
     "prettier": "3.1.1",
     "typescript": "5.2.2",
     "tsparticles": "^2.12.0",
