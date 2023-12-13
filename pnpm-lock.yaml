@@ -14,8 +14,8 @@ devDependencies:
     specifier: 1.2.18
     version: 1.2.18(@types/node@20.5.9)(undici@5.27.2)
   '@types/eslint':
-    specifier: 8.44.8
-    version: 8.44.8
+    specifier: 8.44.9
+    version: 8.44.9
   '@types/node':
     specifier: ^20.5.9
     version: 20.5.9
@@ -467,8 +467,8 @@ packages:
       '@types/responselike': 1.0.0
     dev: true
 
-  /@types/eslint@8.44.8:
-    resolution: {integrity: sha512-4K8GavROwhrYl2QXDXm0Rv9epkA8GBFu0EI+XrrnnuCl7u8CWBRusX7fXJfanhZTDWSAL24gDI/UqXyUM0Injw==}
+  /@types/eslint@8.44.9:
+    resolution: {integrity: sha512-6yBxcvwnnYoYT1Uk2d+jvIfsuP4mb2EdIxFnrPABj5a/838qe5bGkNLFOiipX4ULQ7XVQvTxOh7jO+BTAiqsEw==}
     dependencies:
       '@types/estree': 1.0.1
       '@types/json-schema': 7.0.12
