@@ -50,8 +50,8 @@ devDependencies:
     specifier: 4.4.9
     version: 4.4.9(@types/node@20.5.9)
   vite-tsconfig-paths:
-    specifier: 4.2.1
-    version: 4.2.1(typescript@5.2.2)(vite@4.4.9)
+    specifier: 4.2.3
+    version: 4.2.3(typescript@5.2.2)(vite@4.4.9)
 
 packages:
 
@@ -4313,8 +4313,8 @@ packages:
       builtins: 1.0.3
     dev: true
 
-  /vite-tsconfig-paths@4.2.1(typescript@5.2.2)(vite@4.4.9):
-    resolution: {integrity: sha512-GNUI6ZgPqT3oervkvzU+qtys83+75N/OuDaQl7HmOqFTb0pjZsuARrRipsyJhJ3enqV8beI1xhGbToR4o78nSQ==}
+  /vite-tsconfig-paths@4.2.3(typescript@5.2.2)(vite@4.4.9):
+    resolution: {integrity: sha512-xVsA2xe6QSlzBujtWF8q2NYexh7PAUYfzJ4C8Axpe/7d2pcERYxuxGgph9F4f0iQO36g5tyGq6eBUYIssdUrVw==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
