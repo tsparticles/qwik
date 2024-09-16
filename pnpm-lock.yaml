@@ -47,11 +47,11 @@ devDependencies:
     specifier: 5.27.2
     version: 5.27.2
   vite:
-    specifier: 4.4.9
-    version: 4.4.9(@types/node@20.5.9)
+    specifier: 4.5.5
+    version: 4.5.5(@types/node@20.5.9)
   vite-tsconfig-paths:
     specifier: 4.2.1
-    version: 4.2.1(typescript@5.2.2)(vite@4.4.9)
+    version: 4.2.1(typescript@5.2.2)(vite@4.5.5)
 
 packages:
 
@@ -98,7 +98,7 @@ packages:
     dependencies:
       csstype: 3.1.2
       undici: 5.27.2
-      vite: 4.5.0(@types/node@20.5.9)
+      vite: 4.5.5(@types/node@20.5.9)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4313,7 +4313,7 @@ packages:
       builtins: 1.0.3
     dev: true
 
-  /vite-tsconfig-paths@4.2.1(typescript@5.2.2)(vite@4.4.9):
+  /vite-tsconfig-paths@4.2.1(typescript@5.2.2)(vite@4.5.5):
     resolution: {integrity: sha512-GNUI6ZgPqT3oervkvzU+qtys83+75N/OuDaQl7HmOqFTb0pjZsuARrRipsyJhJ3enqV8beI1xhGbToR4o78nSQ==}
     peerDependencies:
       vite: '*'
@@ -4324,50 +4324,14 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.1.2(typescript@5.2.2)
-      vite: 4.4.9(@types/node@20.5.9)
+      vite: 4.5.5(@types/node@20.5.9)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@4.4.9(@types/node@20.5.9):
-    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 20.5.9
-      esbuild: 0.18.17
-      postcss: 8.4.27
-      rollup: 3.27.2
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite@4.5.0(@types/node@20.5.9):
-    resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
+  /vite@4.5.5(@types/node@20.5.9):
+    resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
