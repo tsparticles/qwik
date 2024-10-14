@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@builder.io/qwik':
     specifier: 1.2.18
-    version: 1.2.18(@types/node@20.5.9)(undici@5.27.2)
+    version: 1.2.18(@types/node@20.5.9)(undici@6.20.1)
   '@types/eslint':
     specifier: 8.44.9
     version: 8.44.9
@@ -44,8 +44,8 @@ devDependencies:
     specifier: 5.2.2
     version: 5.2.2
   undici:
-    specifier: 5.27.2
-    version: 5.27.2
+    specifier: 6.20.1
+    version: 6.20.1
   vite:
     specifier: 4.4.9
     version: 4.4.9(@types/node@20.5.9)
@@ -89,7 +89,7 @@ packages:
       types-pkg-json: 1.2.1
     dev: true
 
-  /@builder.io/qwik@1.2.18(@types/node@20.5.9)(undici@5.27.2):
+  /@builder.io/qwik@1.2.18(@types/node@20.5.9)(undici@6.20.1):
     resolution: {integrity: sha512-YfkpRI8IoJ6OkIlMoJ4jdjbotZSmBfMtf9ibxbf9vZLgKVLkSbSb4hgpA+NMWwQb/ojgn/6YJ49MwaZP81sm4Q==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
@@ -97,7 +97,7 @@ packages:
       undici: ^5.14.0
     dependencies:
       csstype: 3.1.2
-      undici: 5.27.2
+      undici: 6.20.1
       vite: 4.5.0(@types/node@20.5.9)
     transitivePeerDependencies:
       - '@types/node'
@@ -342,11 +342,6 @@ packages:
   /@eslint/js@8.56.0:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /@fastify/busboy@2.0.0:
-    resolution: {integrity: sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==}
-    engines: {node: '>=14'}
     dev: true
 
   /@humanwhocodes/config-array@0.11.13:
@@ -4246,11 +4241,9 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: true
 
-  /undici@5.27.2:
-    resolution: {integrity: sha512-iS857PdOEy/y3wlM3yRp+6SNQQ6xU0mmZcwRSriqk+et/cwWAtwmIGf6WkoDN2EK/AMdCO/dfXzIwi+rFMrjjQ==}
-    engines: {node: '>=14.0'}
-    dependencies:
-      '@fastify/busboy': 2.0.0
+  /undici@6.20.1:
+    resolution: {integrity: sha512-AjQF1QsmqfJys+LXfGTNum+qw4S88CojRInG/6t31W/1fk6G59s92bnAvGz5Cmur+kQv2SURXEvvudLmbrE8QA==}
+    engines: {node: '>=18.17'}
     dev: true
 
   /unique-string@3.0.0:
