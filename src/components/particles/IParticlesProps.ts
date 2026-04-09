@@ -1,7 +1,7 @@
 import {
   CSSProperties, ClassList, NoSerialize, QRL, Signal
 } from "@builder.io/qwik";
-import type { Container, Engine, ISourceOptions } from "tsparticles-engine";
+import type { Container, Engine, ISourceOptions } from "@tsparticles/engine";
 
 export interface IParticlesProps {
 	id?: string;

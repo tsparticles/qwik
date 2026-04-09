@@ -1,11 +1,11 @@
 import { Particles } from "./components/particles";
-import { loadFull } from "tsparticles";
+import { loadAll } from "@tsparticles/all";
 import { $ } from "@builder.io/qwik";
-import type { Engine } from "tsparticles-engine";
+import type { Engine } from "@tsparticles/engine";
 
 export default () => {
   const init = $(async (engine: Engine) => {
-    await loadFull(engine);
+    await loadAll(engine);
   });
 
   return (

@@ -1,12 +1,12 @@
 import {
-  $,
   NoSerialize,
   component$,
   noSerialize,
   useSignal,
   useVisibleTask$,
 } from "@builder.io/qwik";
-import { Container, tsParticles } from "tsparticles-engine";
+import { tsParticles } from "@tsparticles/engine";
+import type { Container } from "@tsparticles/engine";
 import type { IParticlesProps } from "./IParticlesProps";
 
 /**
@@ -18,6 +18,8 @@ const Particles = component$<IParticlesProps>((props) => {
   const librarySig = useSignal<NoSerialize<Container | undefined>>(undefined);
 
   const id = props.id ?? "tsparticles";
+  const url = props.url;
+  const options = props.options ?? props.params;
 
   const {
     init: InitFC,
@@ -31,13 +33,13 @@ const Particles = component$<IParticlesProps>((props) => {
   useVisibleTask$(function Initializer({ track, cleanup }) {
     track(() => initSig.value);
 
-    const loadParticles = $(async () => {
+    const loadParticles = async () => {
       if (!initSig.value) return;
 
       const container = await tsParticles.load({
-        url: props.url,
+        url,
         id,
-        options: props.options ?? props.params,
+        options,
       });
 
       if (props.container) {
@@ -49,7 +51,7 @@ const Particles = component$<IParticlesProps>((props) => {
       if (loaded) {
         await loaded(container);
       }
-    });
+    };
 
     const initParticles = async () => {
       if (InitFC) {
