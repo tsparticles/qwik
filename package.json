@@ -38,8 +38,8 @@
     "qwik": "qwik"
   },
   "dependencies": {
-    "@tsparticles/all": "^3.9.1",
-    "@tsparticles/engine": "^3.9.1"
+    "@tsparticles/all": "^4.0.0-beta.11",
+    "@tsparticles/engine": "^4.0.0-beta.11"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.18",
